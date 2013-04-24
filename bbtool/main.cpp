@@ -8,11 +8,28 @@
 
 #include <iostream>
 
-int main (int argc, const char * argv[])
-{
+#include "bb.h"
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+void usage() {
+    printf("usage: bbtool <cmd>\n");
+    printf("commands: \n");
+    printf("\treset\n");
+}
+
+int main (int argc, const char* argv[]) {
+    if(argc < 2) {
+        usage();
+    }
+    
+    printf("Starting BBTool\n");
+    const char* command = argv[1];
+    if(strcmp(command, "reset") == 0) {
+        bb_reset();
+        
+    } else {
+        usage();
+    }
+    
 	return 0;
 }
 

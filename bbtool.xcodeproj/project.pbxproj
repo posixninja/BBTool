@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8A1A74CD17285B2F000A32AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A74CC17285B2F000A32AB /* main.cpp */; };
+		8A1A74D417285B4F000A32AB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1A74D317285B4F000A32AB /* CoreFoundation.framework */; };
+		8A1A74D617285B56000A32AB /* libIOKit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1A74D517285B56000A32AB /* libIOKit.dylib */; };
+		8A1A74DA17285B8C000A32AB /* bb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A74D817285B8C000A32AB /* bb.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +20,10 @@
 		8A1A74C817285B2F000A32AB /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		8A1A74CB17285B2F000A32AB /* 0xdeadfa11 */ = {isa = PBXFileReference; lastKnownFileType = text; name = 0xdeadfa11; path = Package/usr/bin/0xdeadfa11; sourceTree = "<group>"; };
 		8A1A74CC17285B2F000A32AB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8A1A74D317285B4F000A32AB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8A1A74D517285B56000A32AB /* libIOKit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libIOKit.dylib; path = usr/lib/libIOKit.dylib; sourceTree = SDKROOT; };
+		8A1A74D817285B8C000A32AB /* bb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bb.cpp; sourceTree = "<group>"; };
+		8A1A74D917285B8C000A32AB /* bb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bb.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1A74D617285B56000A32AB /* libIOKit.dylib in Frameworks */,
+				8A1A74D417285B4F000A32AB /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +42,7 @@
 		8A1A74B717285B2E000A32AB = {
 			isa = PBXGroup;
 			children = (
+				8A1A74D717285B5D000A32AB /* Frameworks */,
 				8A1A74C217285B2F000A32AB /* bbtool */,
 				8A1A74C117285B2F000A32AB /* Products */,
 			);
@@ -49,6 +59,8 @@
 		8A1A74C217285B2F000A32AB /* bbtool */ = {
 			isa = PBXGroup;
 			children = (
+				8A1A74D817285B8C000A32AB /* bb.cpp */,
+				8A1A74D917285B8C000A32AB /* bb.h */,
 				8A1A74CC17285B2F000A32AB /* main.cpp */,
 				8A1A74C317285B2F000A32AB /* Package */,
 				8A1A74C717285B2F000A32AB /* Supporting Files */,
@@ -96,6 +108,15 @@
 				8A1A74CB17285B2F000A32AB /* 0xdeadfa11 */,
 			);
 			name = bin;
+			sourceTree = "<group>";
+		};
+		8A1A74D717285B5D000A32AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A74D517285B56000A32AB /* libIOKit.dylib */,
+				8A1A74D317285B4F000A32AB /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1A74CD17285B2F000A32AB /* main.cpp in Sources */,
+				8A1A74DA17285B8C000A32AB /* bb.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,10 +254,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
+				iOSOpenDevDevice = aphone4;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
-				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevRespringOnInstall = NO;
 				iOSOpenDevUsePackageVersionPList = YES;
 			};
 			name = Debug;
@@ -247,10 +269,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = "";
+				iOSOpenDevDevice = aphone4;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
-				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevRespringOnInstall = NO;
 				iOSOpenDevUsePackageVersionPList = YES;
 			};
 			name = Release;
