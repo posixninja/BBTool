@@ -14,6 +14,9 @@ void usage() {
     printf("usage: bbtool <cmd>\n");
     printf("commands: \n");
     printf("\treset\n");
+    printf("\tenter-dload\n");
+    printf("\n");
+    exit(1);
 }
 
 int main (int argc, const char* argv[]) {
@@ -26,7 +29,11 @@ int main (int argc, const char* argv[]) {
     if(strcmp(command, "reset") == 0) {
         bb_reset();
         
-    } else {
+    } else if(strcmp(command, "enter-dload") == 0) {
+        bb_reset();
+        bb_enter_download_mode();
+        
+    } else { 
         usage();
     }
     

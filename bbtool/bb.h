@@ -12,5 +12,6 @@
 #include <iostream>
 
 void bb_reset();
+void bb_enter_download_mode();
 
 #endif /* defined(__bbtool__bb__) */
